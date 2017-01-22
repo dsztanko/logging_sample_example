@@ -4,6 +4,7 @@ import logging_sample.controller.SampleAPIController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static logging_sample.logging.LogFormatter.FORMAT;
 import static spark.Spark.exception;
 import static spark.Spark.get;
 import static spark.Spark.port;
@@ -19,7 +20,7 @@ public class Server {
 
     public static void main(String[] args) {
         port(portNum);
-        logger.debug("Server started to run on port: {}", portNum);
+        logger.debug(FORMAT.getCustomizedFormatter() + "Server started to run on port: {}", portNum);
 
         Server app = new Server();
         app.controller = new SampleAPIController();
@@ -30,6 +31,7 @@ public class Server {
 
         // --- EXCEPTION HANDLING ---
         exception(Exception.class, (exception, request, response) -> {
+            logger.error(FORMAT.getCustomizedFormatter() + "Exception caused.");
             response.status(500);
             response.body(String.format("Unexpected error occurred: %s", exception.getMessage()));
         });
