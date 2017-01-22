@@ -1,0 +1,5 @@
+# intelliJ configurations
+/.idea
+
+# igoring iml extensions
+logging_sample.iml
