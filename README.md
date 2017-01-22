@@ -26,7 +26,7 @@ In the \<appender> you can see this piece of code:
 
 This row communicates with the SampleFilter class. It does nothing more than prints out the messages which contains my customized string '>>>>> '.
 
-And that's all how it works. Just simple as that.
+And that's all how it works. Just simple as that. Enjoy the flow!
 
 ######Thanks for reading, hope you've found some useful info here.
 
