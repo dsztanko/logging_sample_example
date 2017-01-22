@@ -5,7 +5,8 @@ This repo was made to show you a possible way of how to get rid of the system lo
 
 If you don't like using logging (studied during overcomplicated-tac-toe week) because you find it quite difficult to find your personal messages in the console, this is my solution how to filter your owns.
 
-Instructions:
+####Instructions:
+
 1. Import the codebase as a Maven project.
 2. Run Server.java.
 As you can see it has a simple Server class which runs on port 60000.
@@ -14,7 +15,7 @@ It has 2 routes. If they are requested, they print some relevant log messages in
 4. Check your console.
 Log messages are already filtered, as you can see.
 
-Explanation:
+####Explanation:
 Firstly, you need to import logback dependencies in your pom.xml. As you probably noticed, when I add a new log message, I concat a special string at the beginning of the row. This is my filter, I saved it into an enum called LogFormatter and use it as some kind of global variable. It is handled dynamically this way, because if someone doesn't like my '>>>>> '-s, then it can modified by changing only one row. Important to note, that every message of yours need to start with this string, because it represents your customized filter.
 
 You can find in 'resources' a logback xml. It is the configuration file of this library. It has two <appenders>: one is responsible for controlling logging into console, the other one is responsible for writing messages into files. By default it creates a log folder (.gitignored) in the root directory and creates log files day by day.
