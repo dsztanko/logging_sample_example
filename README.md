@@ -18,7 +18,7 @@ Log messages are already filtered, as you can see.
 ####Explanation:
 Firstly, you need to import logback dependencies in your pom.xml. As you probably noticed, when I add a new log message, I concat a special string at the beginning of the row. This is my filter, I saved it into an enum called LogFormatter and use it as some kind of global variable. It is handled dynamically this way, because if someone doesn't like my '>>>>> '-s, then it can modified by changing only one row. Important to note, that every message of yours need to start with this string, because it represents your customized filter.
 
-You can find in 'resources' a logback xml. It is the configuration file of this library. It has two <appenders>: one is responsible for controlling logging into console, the other one is responsible for writing messages into files. By default it creates a log folder (.gitignored) in the root directory and creates log files day by day.
+You can find in 'resources' a logback xml. It is the configuration file of this library. It has two \<appenders>: one is responsible for controlling logging into console, the other one is responsible for writing messages into files. By default it creates a log folder (.gitignored) in the root directory and creates log files day by day.
 
 In the \<appender> you can see this piece of code:
 
