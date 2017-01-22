@@ -26,6 +26,6 @@ This row communicates with the SampleFilter class. It does nothing more than pri
 
 And that's all how it works. Just simple as that.
 
-Thanks for reading, hope you've found some useful info here.
+######Thanks for reading, hope you've found some useful info here.
 
 
