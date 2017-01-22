@@ -3,3 +3,6 @@
 
 # igoring iml extensions
 logging_sample.iml
+
+# target folder
+/target
