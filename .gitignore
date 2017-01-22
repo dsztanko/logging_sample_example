@@ -6,3 +6,6 @@ logging_sample.iml
 
 # target folder
 /target
+
+# log folder
+/log
